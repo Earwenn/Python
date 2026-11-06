@@ -1,0 +1,33 @@
+comment => tester avec Anaconda et Jupyter Note Book 
+Le but de ce programme est sortir les nombres premiers d'une liste 
+
+### première version il faut modifier le "100" si vous voulez aller jusqu'a 1000 par exemple, 
+
+d = 1
+nbd = 0 
+for nb in range (0, 100+1):
+    nbd = 0
+    for d in range (1, nb+1):
+        if nb%d==0:
+            nbd += 1
+    if nbd == 2:
+        print (nb, "is a prime number")
+    else:
+        print (nb, "is not a prime number")
+
+
+### Deuxième version interactive => vous choisissez le nombre ou le chiffre et ça vous dit si c'est un nombre premier ou pas 
+
+
+t = int (input ( "which number ? : "))
+d = 0
+nbd = 0 
+while d != t:
+    d += 1
+    if t%d==0:
+        nbd += 1
+
+if nbd == 2:
+    print (t, "prime")
+else:
+    print (t, "not prime")
